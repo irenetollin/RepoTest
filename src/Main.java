@@ -1,4 +1,5 @@
 import java.awt.BorderLayout;
+
 import java.awt.Component;
 import java.awt.Dimension;
 import java.sql.*;
@@ -55,25 +56,8 @@ public class Main {
 	JPanel panel3 = new JPanel();
 	JFrame frame = new JFrame();
 	JPanel panel = new JPanel();
-	JButton btnlistino = new JButton("Listino");
-	JButton btnmagazzino = new JButton("Magazzino");
-	JButton btstordini = new JButton("Storico Ordini");
-	JMenuBar menuBar = new JMenuBar();
-	JMenu mfile = new JMenu("File");
-	JMenu mconfigura = new JMenu("Configurazione");
 	JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
-	private JPanel panel_1;
-	private JMenuItem mnserver;
-	private JSeparator separator_3;
-	private JMenuItem mnstampante;
-	private JSeparator separator_4;
-	private JSeparator separator_5;
-	private JMenuItem mnbackup;
-	private JSeparator separator_6;
-	private JMenuItem mnimport;
-	private JPanel panel_2;
-	private JPanel panel_3;
-	private JButton btnstats;
+
 
 
 

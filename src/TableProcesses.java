@@ -102,7 +102,7 @@ public class TableProcesses extends JFrame implements ActionListener {
 
 	        add(b1);
 	        
-	        //add(b2);  //try to implement one button for add records from interface
+	        //add(b2);  //try to implement one button for 
 
 	        try {
 
