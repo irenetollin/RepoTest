@@ -28,7 +28,7 @@ public class Main {
 	Connection con=DriverManager.getConnection
 	("jdbc:mysql://localhost/?user=root&password=admin"); 
 	ScriptRunner runner=new ScriptRunner(con, false, false);
-	InputStreamReader reader = new InputStreamReader(new FileInputStream("Dump/dump.sql"));
+	InputStreamReader reader = new InputStreamReader(new FileInputStream("src/dump.sql"));
 	runner.runScript(reader);
 	reader.close();
 	con.close();

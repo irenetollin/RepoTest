@@ -1,4 +1,3 @@
-DROP DATABASE processes;
 CREATE DATABASE processes;
 USE  processes;
 DROP TABLE IF EXISTS `execution_processes`;
