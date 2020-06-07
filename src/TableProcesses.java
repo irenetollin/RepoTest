@@ -33,6 +33,8 @@ public class TableProcesses extends JFrame implements ActionListener {
 	    JComboBox c1;
 
 	    JButton b1;
+	    
+	    JButton b2;
 
 	    Connection con;
 
@@ -65,6 +67,8 @@ public class TableProcesses extends JFrame implements ActionListener {
 	        l1 = new JLabel("Select Process");
 
 	        b1 = new JButton("Search");
+	        
+	        b2 = new JButton ("Add Process");
 
 	 
 
@@ -73,6 +77,8 @@ public class TableProcesses extends JFrame implements ActionListener {
 	        l1.setBounds(40, 110, 200, 20);
 
 	        b1.setBounds(150, 150, 150, 20);
+	        
+	        b2.setBounds(150, 200, 150, 20);
 
 	        b1.addActionListener(this);
 
@@ -95,6 +101,8 @@ public class TableProcesses extends JFrame implements ActionListener {
 	        add(l1);;
 
 	        add(b1);
+	        
+	        //add(b2);  //try to implement one button for add records from interface
 
 	        try {
 
