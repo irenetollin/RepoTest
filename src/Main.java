@@ -30,6 +30,7 @@ import java.awt.event.ActionEvent;
 
 import javax.swing.event.ChangeListener;
 
+import com.ibatis.common.jdbc.ScriptRunner;
 
 import javax.swing.JTabbedPane;
 
@@ -39,8 +40,10 @@ import javax.swing.JMenuItem;
 
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -64,8 +67,15 @@ public class Main {
 	public static void main(String args[]){  
 	try{  
 	Class.forName("com.mysql.jdbc.Driver");  
-	Connection con=DriverManager.getConnection(  
-	"jdbc:mysql://localhost:3306/processes","root","admin");  
+	//Connection con=DriverManager.getConnection(  
+	//"jdbc:mysql://localhost:3306/processes","root","admin");  
+	Connection con=DriverManager.getConnection
+	("jdbc:mysql://localhost/?user=root&password=admin"); 
+	ScriptRunner runner=new ScriptRunner(con, false, false);
+	InputStreamReader reader = new InputStreamReader(new FileInputStream("Dump/dump.sql"));
+	runner.runScript(reader);
+	reader.close();
+	con.close();
 	//here sonoo is database name, root is username and password  
 	//Statement stmt=con.createStatement();  
 	//ResultSet rs=stmt.executeQuery("select * from processes");  

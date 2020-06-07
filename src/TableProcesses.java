@@ -1,4 +1,5 @@
 import java.awt.BorderLayout;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -64,7 +65,7 @@ public class TableProcesses extends JFrame implements ActionListener {
 
 	        l0.setFont(new Font("Serif", Font.BOLD, 20));
 
-	        l1 = new JLabel("Select Process");
+	        l1 = new JLabel("Select Process ID");
 
 	        b1 = new JButton("Search");
 	        
@@ -165,7 +166,7 @@ public class TableProcesses extends JFrame implements ActionListener {
 
 	        frame1 = new JFrame("Result for process execution");
 
-	        frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	        //frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 	        frame1.setLayout(new BorderLayout());
 
@@ -221,7 +222,7 @@ public class TableProcesses extends JFrame implements ActionListener {
 	            		("select ProcessName, periodicity.Periodicity, Execution_Date, Execution_Status from execution_processes "
 	            				+ "JOIN processes ON execution_processes.Process_ID = processes.ID "
 	            				+ "JOIN periodicity ON processes.periodicity = periodicity.IDPeriodicity "
-	            				+ "WHERE Process_ID = "+(String) c1.getSelectedItem() );
+	            				+ "WHERE Process_ID = "+(String) c1.getSelectedItem() + " ORDER BY Execution_Date");
 
 	            ResultSet rs = pst.executeQuery();
 
