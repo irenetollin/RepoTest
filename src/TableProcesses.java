@@ -8,10 +8,8 @@ import java.sql.Connection;
 import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Time;
-import java.text.DateFormat;
 import java.util.Vector;
 
 import javax.swing.JButton;
@@ -103,7 +101,6 @@ public class TableProcesses extends JFrame implements ActionListener {
 
 	        add(b1);
 	        
-	        //add(b2);  //try to implement one button for 
 
 	        try {
 
@@ -166,19 +163,10 @@ public class TableProcesses extends JFrame implements ActionListener {
 
 	        frame1 = new JFrame("Result for process execution");
 
-	        //frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
 	        frame1.setLayout(new BorderLayout());
-
-	//TableModel tm = new TableModel();
-
 	        DefaultTableModel model = new DefaultTableModel();
 
 	        model.setColumnIdentifiers(columnNames);
-
-	//DefaultTableModel model = new DefaultTableModel(tm.getData1(), tm.getColumnNames());
-
-	//table = new JTable(model);
 
 	        table = new JTable();
 
@@ -192,15 +180,13 @@ public class TableProcesses extends JFrame implements ActionListener {
 
 	        scroll.setHorizontalScrollBarPolicy(
 
-	                JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+	        JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 
 	        scroll.setVerticalScrollBarPolicy(
 
-	                JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+	        JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
 
 	        from = (String) c1.getSelectedItem();
-
-	//String textvalue = textbox.getText();
 	        
 	        String ProcessName = "";
 	        
